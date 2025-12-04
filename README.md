@@ -1,6 +1,3 @@
-# bss-requirements-comparison => "AI-powered system for comparing telecom BSS requirements using OpenAI and CrewAI"
-# BSS Requirements Comparison System
-
 AI-Powered tool for comparing telecom BSS (Business Support Systems) requirements across different customer implementations using LLM and CrewAI.
 
 ## Overview
