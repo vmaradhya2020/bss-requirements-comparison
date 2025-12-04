@@ -90,6 +90,10 @@ comparison:
 ```
 
 ## Usage
+### Steps to invoke from the command line.
+> python cli/compare_requirements.py --new data/requirements_sprint.md --existing data/implemented_verizon.md
+📄 Reports generated:
+  - HTML: outputs/comparison_reports/comparison_20251130_182803.html
 
 ### Basic Comparison
 
