@@ -1,0 +1,44 @@
+# BSS Requirements Comparison System Configuration
+
+# LLM Settings
+llm:
+  provider: "openai"  # Options: openai, azure, litellm
+  model: "gpt-4"
+  temperature: 0.3
+  max_tokens: 2000
+  embedding_model: "text-embedding-ada-002"
+
+# Comparison Thresholds
+comparison:
+  exact_match_threshold: 0.95    # 95% similarity = exact match
+  similar_match_threshold: 0.70  # 70-95% = similar feature
+  # Below 70% = delta (new feature)
+
+# Parser Settings
+parser:
+  supported_formats:
+    - "md"
+    - "txt"
+  feature_patterns:
+    - "^#{1,3}\\s+(.+)$"           # Markdown headers
+    - "^\\d+\\.\\s+(.+)$"          # Numbered lists
+    - "^[-*]\\s+(.+)$"             # Bullet points
+
+# Report Settings
+report:
+  default_format: "html"  # Options: markdown, html, both
+  include_statistics: true
+  include_recommendations: true
+  theme: "professional"   # Options: professional, minimal
+
+# CrewAI Settings
+crewai:
+  verbose: true
+  max_rpm: 10  # Rate limit for API calls
+  timeout: 300  # seconds
+
+# Output Settings
+output:
+  directory: "outputs/comparison_reports"
+  timestamp_format: "%Y%m%d_%H%M%S"
+  auto_open_report: false
